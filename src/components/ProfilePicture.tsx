@@ -8,7 +8,7 @@ const ProfilePicture = () => {
       <div className="profile-picture">
         <img src={profile} />
       </div>
-      <QuickActionButtons icon={ellipsis} />
+      {/* <QuickActionButtons icon={ellipsis} /> */}
     </div>
   );
 };
