@@ -1,5 +1,5 @@
-import QuickActionButtons from "./QuickActionButtons";
-import ellipsis from "../assets/ellipsis.png";
+// import QuickActionButtons from "./QuickActionButtons";
+// import ellipsis from "../assets/ellipsis.png";
 import profile from "../assets/Default profie Icon.svg";
 
 const ProfilePicture = () => {

@@ -1,11 +1,12 @@
 type Props = {
-  icon: string;
+  icon: string,
+  url: string
 };
 
 const QuickActionButtons = (props: Props) => {
   return (
     <div className="quick-action-button">
-      <img src={props.icon} className="action-button-image" />
+      <a href={props.url}><img src={props.icon} className="action-button-image"/></a>
     </div>
   );
 };

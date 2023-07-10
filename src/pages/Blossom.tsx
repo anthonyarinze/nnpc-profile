@@ -9,7 +9,10 @@ import linkedin from "../assets/LinkedIn Icon NNPC.svg";
 import staffbiodata from "../assets/Staff Bio Data NNPC.svg";
 
 type Props = {
-  name: string;
+  name: string,
+  linkedin: string,
+  email: string,
+  vcard: string,
 };
 
 const Blossom = (props: Props) => {
@@ -18,12 +21,12 @@ const Blossom = (props: Props) => {
       <ProfilePicture />
       <h2 className="user-name">{props.name}</h2>
       <p className="user-title">Research and Innovation</p>
-      <StaffDataButton icon={linkedin} text="My LinkedIn Profile" />
-      <StaffDataButton icon={staffbiodata} text="Staff Bio Data" />
+      <StaffDataButton icon={linkedin} text="My LinkedIn Profile" url={props.linkedin}/>
+      <StaffDataButton icon={staffbiodata} text="Staff Bio Data" url={props.vcard}/>
       <div className="quick-action-section">
-        <QuickActionSection icon={call} text="Call" />
-        <QuickActionSection icon={sms} text="SMS" />
-        <QuickActionSection icon={email} text="Email" />
+        <QuickActionSection icon={call} text="Call" url=""/>
+        <QuickActionSection icon={sms} text="SMS" url=""/>
+        <QuickActionSection icon={email} text="Email" url={"mailto:" + props.email}/>
       </div>
       <img src={nnpc} />
       <p>Produced by Mercuoory Infinity</p>
