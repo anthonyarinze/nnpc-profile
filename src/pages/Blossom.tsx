@@ -13,12 +13,13 @@ type Props = {
   linkedin: string,
   email: string,
   vcard: string,
+  image: string
 };
 
 const Blossom = (props: Props) => {
   return (
     <div className="app">
-      <ProfilePicture />
+      <ProfilePicture image={props.image}/>
       <h2 className="user-name">{props.name}</h2>
       <p className="user-title">Research and Innovation</p>
       <StaffDataButton icon={linkedin} text="My LinkedIn Profile" url={props.linkedin}/>

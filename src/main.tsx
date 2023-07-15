@@ -3,6 +3,8 @@ import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Blossom from "./pages/Blossom.tsx";
 import Header from "./components/Header.tsx";
+import blossomImage from "./assets/Blossom Ozurumba.png";
+import muniruImage from  "./assets/Muniru Mai.png";
 
 const pagesData = [
   {
@@ -13,6 +15,7 @@ const pagesData = [
     email: "Blossom.Ozurumba@nnpcgroup.com",
     phone: "+2348033413213",
     vcard: "https://vcard.link/card/DPSk.vcf",
+    image: blossomImage
     },
     {
     text: "Muniru Mai",
@@ -22,6 +25,7 @@ const pagesData = [
     email: "Muniru.Mai@nnpcgroup.com",
     phone: "+2348033499226",
     vcard: "https://vcard.link/card/DPSY.vcf",
+    image: muniruImage
     },
     {
     text: "Rasheed O. Ojulari",
@@ -31,6 +35,7 @@ const pagesData = [
     email: "Olushola.Ojulari@nnpcgroup.com",
     phone: "+2347034008095",
     vcard: "https://vcard.link/card/DPSr.vcf",
+    image: ""
     },
     {
     text: "Olatomiwa James",
@@ -40,6 +45,7 @@ const pagesData = [
     email: "Olaniyi.Olatomiwa@nnpcgroup.com",
     phone: "+2348038745696",
     vcard: "https://vcard.link/card/DPS5.vcf",
+    image: ""
     },
     {
     text: "Mudi Abubakar",
@@ -49,6 +55,7 @@ const pagesData = [
     email: "Abubakar.Mudi@nnpcgroup.com",
     phone: "+2348131760592",
     vcard: "https://vcard.link/card/DPSt.vcf",
+    image: ""
     },
     {
     text: "Gesiyi T. Amakoromo",
@@ -58,6 +65,7 @@ const pagesData = [
     email: "Gesiyi.Amakoromo@nnpcgroup.com",
     phone: "+2348033365663",
     vcard: "https://vcard.link/card/DPS3.vcf",
+    image: ""
     },
     {
     text: "Sadiq Ahmad",
@@ -67,6 +75,7 @@ const pagesData = [
     email: "Sadiq.Ahmad@nnpcgroup.com",
     phone: "+2348079185822",
     vcard: "https://vcard.link/card/DPSK.vcf",
+    image: ""
     },
     {
     text: "Emmanuel Okwudili ",
@@ -76,6 +85,7 @@ const pagesData = [
     email: "Emmanuel.Okwudili@nnpcgroup.com",
     phone: "+2347060500646",
     vcard: "https://vcard.link/card/DPS4.vcf",
+    image: ""
   },
 ];
 
@@ -83,8 +93,20 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <Header />
     <Routes>
-      {pagesData.map(({ text, href, linkedin, email, vcard }, index) => (
-        <Route path={href} element={<Blossom name={text} linkedin={linkedin} email={email} vcard={vcard}/>} key={index}/>
+      {pagesData.map(({ text, href, linkedin, email, vcard, image }, index) => (
+        <Route
+          path={href}
+          element={
+            <Blossom
+              name={text}
+              linkedin={linkedin}
+              email={email}
+              vcard={vcard}
+              image={image}
+            />
+          }
+          key={index}
+        />
       ))}
     </Routes>
   </BrowserRouter>

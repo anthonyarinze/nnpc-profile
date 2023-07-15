@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const navItems = [
     {
-      name: "Blossom Ozurumba",
-      href: "/",
+      text: "Blossom Ozurumba",
+      href: "/Blossom",
       component: "Blossom",
       linkedin: "https://www.linkedin.com/in/blossomozurumba",
       email: "Blossom.Ozurumba@nnpcgroup.com",
       phone: "+2348033413213",
     },
     {
-      name: "Muniru Mai",
+      text: "Muniru Mai",
       href: "/Muniru",
       component: "Muniru",
       linkedin: "https://www.linkedin.com/in/muniru-mai-68691319",
